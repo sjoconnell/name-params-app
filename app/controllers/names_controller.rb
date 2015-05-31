@@ -32,4 +32,22 @@ def submit_form
 end
 
 
+
+def number_form_display
+end
+
+def number_submit_form
+  digit = params[:number].to_i
+  if digit > 36
+    @message = "Guess lower"
+  elsif digit < 36
+    @message = "Guess higher"
+  else
+    @message = "You guessed correctly!"
+  end
+
+
+end
+
+
 end
